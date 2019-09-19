@@ -10,11 +10,11 @@ main() {
     # Installing all packages in Dotfiles repository's Brewfile
     install_packages_with_brewfile
     # Changing default shell to ZSH
-    #change_shell_to_zsh
+    change_shell_to_zsh
     # Installing pip packages so that setup_symlinks can setup the symlinks
-    #install_pip_packages
+    install_pip_packages
     # Installing yarn packages
-    #install_yarn_packages
+    install_yarn_packages
     # Setting up symlinks so that setup_vim can install all plugins
     #setup_symlinks
     # Setting up Vim
@@ -31,12 +31,12 @@ main() {
 
 # URL's used through this
 
-DOTFILES_REPO=~/.config/dotfiles
 BREW_INSTALLER=https://raw.githubusercontent.com/sdbruder/dotfiles/master/installers/homebrew_installer
+DOTFILES_REPO=~/.config/dotfiles
 GITHUB_REPO=https://github.com/sdbruder/dotfiles.git
 GIT_REPO=git@github.com:sdbruder/dotfiles.git
+
 VUNDLE_URL=https://github.com/VundleVim/Vundle.vim.git
-TPM_URL=https://github.com/tmux-plugins/tpm
 HOSTS_URL=https://someonewhocares.org/hosts/hosts
 
 function ask_for_sudo() {
@@ -67,7 +67,7 @@ function install_homebrew() {
 }
 
 function install_packages_with_brewfile() {
-    BREW_FILE_PATH="${DOTFILES_REPO}/brew/macOS.Brewfile"
+    BREW_FILE_PATH="${DOTFILES_REPO}/brew/Brewfile"
     info "Installing packages within ${BREW_FILE_PATH}"
     if brew bundle check --file="$BREW_FILE_PATH" &> /dev/null; then
         success "Brewfile's dependencies are already satisfied "
@@ -81,36 +81,36 @@ function install_packages_with_brewfile() {
     fi
 }
 
-function change_shell_to_fish() {
-    info "Fish shell setup"
-    if grep --quiet fish <<< "$SHELL"; then
-        success "Fish shell already exists"
+function change_shell_to_zsh() {
+    info "ZSH shell setup"
+    if grep --quiet zsh <<< "$SHELL"; then
+        success "ZSH shell already exists"
     else
         user=$(whoami)
-        substep "Adding Fish executable to /etc/shells"
+        substep "Adding ZSH executable to /etc/shells"
         if grep --fixed-strings --line-regexp --quiet \
-            "/usr/local/bin/fish" /etc/shells; then
-            substep "Fish executable already exists in /etc/shells"
+            "/usr/local/bin/zsh" /etc/shells; then
+            substep "ZSH executable already exists in /etc/shells"
         else
-            if echo /usr/local/bin/fish | sudo tee -a /etc/shells > /dev/null;
+            if echo /usr/local/bin/zsh | sudo tee -a /etc/shells > /dev/null;
             then
-                substep "Fish executable successfully added to /etc/shells"
+                substep "ZSH executable successfully added to /etc/shells"
             else
-                error "Failed to add Fish executable to /etc/shells"
+                error "Failed to add ZSH executable to /etc/shells"
                 exit 1
             fi
         fi
-        substep "Switching shell to Fish for \"${user}\""
-        if sudo chsh -s /usr/local/bin/fish "$user"; then
-            success "Fish shell successfully set for \"${user}\""
+        substep "Switching shell to ZSH for \"${user}\""
+        if sudo chsh -s /usr/local/bin/zsh "$user"; then
+            success "ZSH shell successfully set for \"${user}\""
         else
-            error "Please try setting Fish shell again"
+            error "Please try setting ZSH shell again"
         fi
     fi
 }
 
 function install_pip_packages() {
-    pip_packages=(powerline-status requests tmuxp virtualenv django)
+    pip_packages=(virtualenv awscli saws boto3 jinja2 mycli s3transferi yamllint pylint)
     info "Installing pip packages \"${pip_packages[*]}\""
 
     pip3_list_outcome=$(pip3 list)
@@ -136,7 +136,7 @@ function install_yarn_packages() {
     # Installing typescript for YouCompleteMe and prettier for Neoformat to auto-format files
     # json for auto-formatting of json responses in terminal
     # vmd for previewing markdown files
-    yarn_packages=(prettier typescript json vmd create-react-app gatsby-cli netlify-cli)
+    yarn_packages=(prettier typescript json vmd tslint tsc tsserver unsplash-wallpaper)
     info "Installing yarn packages \"${yarn_packages[*]}\""
 
     yarn_list_outcome=$(yarn global list)

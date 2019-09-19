@@ -1,0 +1,222 @@
+tap "browsh-org/browsh"
+tap "caskroom/fonts"
+tap "eugenmayer/dockersync"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+tap "homebrew/php"
+tap "homebrew/services"
+tap "rs/tap"
+tap "sambadevi/powerlevel9k"
+tap "universal-ctags/universal-ctags"
+brew "ack"
+brew "python"
+brew "asciinema"
+brew "autoconf"
+brew "automake"
+brew "bat"
+brew "brotli"
+brew "gettext", link: true
+brew "pcre"
+brew "ccat"
+brew "coreutils"
+brew "ctop"
+brew "diff-so-fancy"
+brew "dnsmasq", restart_service: true
+brew "dos2unix"
+brew "entr"
+brew "node"
+brew "eslint"
+brew "exa"
+brew "exiftool"
+brew "fd"
+brew "openjpeg"
+brew "x264"
+brew "ffmpeg"
+brew "figlet"
+brew "gcc"
+brew "fltk"
+brew "libtool"
+brew "fswatch"
+brew "fzf"
+brew "geoip"
+brew "geoipupdate"
+brew "imagemagick"
+brew "gifify"
+brew "gnupg"
+brew "go"
+brew "gradle"
+brew "graphviz"
+brew "grip"
+brew "harbour"
+brew "htop"
+brew "httpie"
+brew "hub"
+brew "hugo"
+brew "igbinary"
+brew "iperf"
+brew "jid"
+brew "jmeter"
+brew "jpegoptim"
+brew "jq"
+brew "jsoncpp"
+brew "jsonlint"
+brew "kubernetes-cli"
+brew "kubernetes-helm"
+brew "lftp"
+brew "libdvdcss"
+brew "libpcl"
+brew "links"
+brew "lynx"
+brew "m-cli"
+brew "mas"
+brew "mhash"
+brew "mcrypt"
+brew "md5sha1sum", link: false
+brew "memcache-top"
+brew "mkcert"
+brew "mtr"
+brew "mysql", restart_service: true
+brew "mytop"
+brew "ncdu"
+brew "neofetch"
+brew "nginx", restart_service: true
+brew "nmap"
+brew "nnn"
+brew "node@8"
+brew "noti"
+brew "nss", link: false
+brew "openconnect"
+brew "optipng"
+brew "p7zip"
+brew "pandoc"
+brew "python@2"
+brew "pcl"
+brew "pcre2"
+brew "php", restart_service: true
+brew "php@7.1"
+brew "php@7.2"
+brew "phplint"
+brew "phpunit"
+brew "pkg-config"
+brew "pre-commit"
+brew "prettyping"
+brew "pssh"
+brew "pstree"
+brew "pulumi"
+brew "re2c"
+brew "reattach-to-user-namespace"
+brew "redis"
+brew "ripgrep"
+brew "rsync"
+brew "s-lang"
+brew "screen"
+brew "screenfetch"
+brew "sha2"
+brew "sha3sum"
+brew "shellcheck"
+brew "speedtest-cli"
+brew "sphinx-doc"
+brew "sshpass"
+brew "sshuttle"
+brew "telnet"
+brew "terraform", link: false
+brew "terraform-docs"
+brew "terraform@0.11"
+brew "terraform_landscape"
+brew "tflint"
+brew "the_silver_searcher"
+brew "tig"
+brew "tinyproxy"
+brew "tldr"
+brew "tmux"
+brew "toilet"
+brew "ttygif"
+brew "uncrustify"
+brew "unison"
+brew "upx"
+brew "vim"
+brew "w3m"
+brew "watch"
+brew "wego"
+brew "wget"
+brew "winetricks"
+brew "wrk"
+brew "yamllint", link: false
+brew "yarn", link: false
+brew "zsh"
+brew "zsh-completions"
+brew "zsh-syntax-highlighting"
+brew "zssh"
+brew "eugenmayer/dockersync/unox"
+brew "sambadevi/powerlevel9k/powerlevel9k"
+brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
+cask "keycastr"
+cask "minikube"
+cask "openconnect-gui"
+cask "sequel-pro-nightly"
+cask "transmission-remote-gui"
+cask "yacreader"
+cask "caskroom/fonts/font-hack-nerd-font"
+mas "AsiniJson", id: 1440033430
+mas "Be Focused", id: 973134470
+mas "BetterSnapTool", id: 417375580
+mas "Bible Study", id: 472790630
+mas "Clock mini", id: 867539680
+mas "Color Picker", id: 641027709
+mas "Desktop Clock", id: 894760156
+mas "Disk Speed Test", id: 425264550
+mas "EasyRes", id: 688211836
+mas "Eggscellent", id: 522294492
+mas "Evernote", id: 406056744
+mas "External Editors For Photos", id: 1074021862
+mas "ForkLift", id: 412448059
+mas "GarageBand", id: 682658836
+mas "GhosteryLite", id: 1436953057
+mas "GIPHY CAPTURE", id: 668208984
+mas "Harvest", id: 506189836
+mas "Hour", id: 569089415
+mas "iMovie", id: 408981434
+mas "IP Scanner", id: 404167149
+mas "iRedis", id: 1169059561
+mas "iStat Mini", id: 927292435
+mas "JPEGmini", id: 498944723
+mas "Keynote", id: 409183694
+mas "Kindle", id: 405399194
+mas "LanScan", id: 472226235
+mas "Magnet", id: 441258766
+mas "MainStage 3", id: 634159523
+mas "Mindcad Tiler", id: 432460453
+mas "Monitor Banda Larga", id: 924625367
+mas "MP3 Encoder", id: 409957696
+mas "Neverwinter Nights 2", id: 465155410
+mas "Novabench", id: 411466132
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Paint S", id: 736473980
+mas "Parcel", id: 639968404
+mas "Phiewer", id: 1226444549
+mas "PhotoMill", id: 778590574
+mas "Pixelmator", id: 407963104
+mas "Polarr Photo Editor", id: 1077124956
+mas "Reeder", id: 880001334
+mas "Remote Mouse", id: 403195710
+mas "RSS Follower", id: 1037705049
+mas "ShutterCount", id: 720123827
+mas "Skitch", id: 425955336
+mas "Slack", id: 803453959
+mas "Snapheal", id: 480623975
+mas "Spark", id: 1176895641
+mas "Speedtest", id: 1153157709
+mas "SQLPro for MSSQL", id: 828466809
+mas "SQLPro for SQLite (Lite)", id: 635299994
+mas "Step Two", id: 1448916662
+mas "Telephone", id: 406825478
+mas "tempo", id: 510148622
+mas "The Unarchiver", id: 425424353
+mas "Tomato One", id: 907364780
+mas "TurboCollage Lite", id: 441052919
+mas "Unsplash Wallpapers", id: 1284863847
+mas "Wake Up Time", id: 495945638
+mas "Xcode", id: 497799835
